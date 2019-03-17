@@ -1,2 +1,13 @@
-version "0.1"
-group "nl.sybrenbolandit"
+allprojects {
+    version "0.1"
+    group "nl.sybrenbolandit"
+}
+
+subprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://jcenter.bintray.com" }
+        maven { url "https://dl.bintray.com/spekframework/spek-dev" }
+    }
+}
