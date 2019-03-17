@@ -1,0 +1,5 @@
+micronaut:
+    application:
+        name: veganscan
+    server:
+        port: 8086

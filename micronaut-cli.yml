@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: nl.sybrenbolandit
+---
+testFramework: spek
+sourceLanguage: kotlin
