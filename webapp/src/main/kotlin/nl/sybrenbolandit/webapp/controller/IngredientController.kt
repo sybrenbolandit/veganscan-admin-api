@@ -1,4 +1,4 @@
-package nl.sybrenbolandit.controller
+package nl.sybrenbolandit.webapp.controller
 
 import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Controller

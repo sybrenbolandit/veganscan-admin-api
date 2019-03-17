@@ -42,7 +42,7 @@ shadowJar {
 
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
 
-mainClassName = "nl.sybrenbolandit.Application"
+mainClassName = "nl.sybrenbolandit.webapp.Application"
 
 test {
     useJUnitPlatform {

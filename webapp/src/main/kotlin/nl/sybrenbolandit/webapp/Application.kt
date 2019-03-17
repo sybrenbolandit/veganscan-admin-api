@@ -1,4 +1,4 @@
-package nl.sybrenbolandit
+package nl.sybrenbolandit.webapp
 
 import io.micronaut.runtime.Micronaut
 
