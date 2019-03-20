@@ -1,4 +1,11 @@
 package nl.sybrenbolandit.persistence.model
 
-class Ingredient(val name: String) {
-}
+import org.bson.codecs.pojo.annotations.BsonCreator
+import org.bson.codecs.pojo.annotations.BsonProperty
+
+data class Ingredient @BsonCreator constructor(
+        @param:BsonProperty("name") val name: String,
+        @param:BsonProperty("synonyms") val synonyms: String?,
+        @param:BsonProperty("type") val type: IngredientType,
+        @param:BsonProperty("description") val description: String?
+)
