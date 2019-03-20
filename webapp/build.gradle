@@ -16,11 +16,14 @@ dependencyManagement {
 
 dependencies {
     compile project(":persistence")
+
+    annotationProcessor "io.micronaut:micronaut-inject-java"
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.21"
+    compile "org.jetbrains.kotlin:kotlin-reflect:1.3.21"
     
     compile "io.micronaut:micronaut-http-client"
     compile "io.micronaut:micronaut-http-server-netty"
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}"
-    compile "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}"
     compile "io.micronaut:micronaut-runtime"
     compile "javax.annotation:javax.annotation-api"
     kapt "io.micronaut:micronaut-inject-java"
