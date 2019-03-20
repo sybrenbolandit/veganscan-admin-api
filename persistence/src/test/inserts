@@ -1,0 +1,4 @@
+
+db.ingredients.save({ name: "Apple", type:"VEGAN", description: "" })
+
+db.products.save({ barcode: "111", name: "Cola", ingredients: [{ name: "Sugar", type: "VEGAN", description: "" } ] })
