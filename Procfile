@@ -1,1 +1,1 @@
-web: java -jar webapp/build/libs/webapp-0.1-all.jar
+web: java -Dmicronaut.environments=test -jar webapp/build/libs/webapp-0.1-all.jar

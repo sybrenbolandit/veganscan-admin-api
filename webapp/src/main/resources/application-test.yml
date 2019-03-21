@@ -1,6 +1,8 @@
 micronaut:
     application:
         name: veganscan
+    server:
+        port: 8080
 
 mongodb:
     uri: mongodb://veganscanuser:dskf887fds7df7sf@ds117846.mlab.com:17846
