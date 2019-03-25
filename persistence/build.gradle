@@ -26,7 +26,6 @@ dependencies {
     compile "javax.annotation:javax.annotation-api"
     kapt "io.micronaut:micronaut-inject-java"
     kapt "io.micronaut:micronaut-validation"
-    kaptTest "io.micronaut:micronaut-inject-java"
     runtime "ch.qos.logback:logback-classic:1.2.3"
 
 }
