@@ -1,12 +1,11 @@
 package nl.sybrenbolandit.webapp.controller
 
-import io.micronaut.http.MediaType
+import io.micronaut.http.HttpStatus
 import io.micronaut.http.annotation.Body
-import io.micronaut.http.annotation.Consumes
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
-import io.micronaut.http.annotation.Produces
+import io.micronaut.http.annotation.Status
 import io.micronaut.validation.Validated
 import io.reactivex.Maybe
 import io.reactivex.Single
@@ -19,15 +18,17 @@ import javax.validation.Valid
 class ProductController(val productRepository: ProductRepository) {
 
     @Post("/")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
+    @Status(HttpStatus.CREATED)
     fun createProduct(@Body @Valid product: Product): Single<Product> {
         return productRepository.createProduct(product)
     }
 
     @Get("/{barcode}")
-    @Produces(MediaType.APPLICATION_JSON)
     fun findProduct(barcode: String): Maybe<Product> {
-        return productRepository.fetchProduct(barcode.toInt())
+        val product = productRepository.fetchProduct(barcode).blockingGet()
+
+        System.out.println("product: $product")
+
+        return productRepository.fetchProduct(barcode)
     }
 }
