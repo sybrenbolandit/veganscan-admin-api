@@ -6,6 +6,7 @@ import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
 import io.micronaut.http.annotation.Status
+import io.micronaut.security.annotation.Secured
 import io.micronaut.validation.Validated
 import io.reactivex.Single
 import nl.sybrenbolandit.persistence.model.Ingredient
@@ -13,6 +14,7 @@ import nl.sybrenbolandit.persistence.repository.IngredientRepository
 import javax.validation.Valid
 
 @Validated
+@Secured("isAuthenticated()")
 @Controller("/ingredients")
 class IngredientController(val ingredientRepository: IngredientRepository) {
 

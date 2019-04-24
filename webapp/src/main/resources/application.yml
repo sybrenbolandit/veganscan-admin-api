@@ -1,6 +1,10 @@
 micronaut:
     application:
         name: veganscan-admin-api
+    security:
+        enabled: true
+        user: veganscan-admin
+        password: lkjsdflsij
 
 mongodb:
     uri: mongodb://veganscanuser:dskf887fds7df7sf@ds117846.mlab.com:17846

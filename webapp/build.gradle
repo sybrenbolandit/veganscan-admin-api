@@ -25,6 +25,7 @@ dependencies {
     compile "io.micronaut:micronaut-http-client"
     compile "io.micronaut:micronaut-http-server-netty"
     compile "io.micronaut:micronaut-runtime"
+    compile "io.micronaut:micronaut-security"
     
     compile "javax.annotation:javax.annotation-api"
     kapt "io.micronaut:micronaut-inject-java"
