@@ -30,7 +30,7 @@ class ProductController(val productRepository: ProductRepository) {
 
     @Get("/{barcode}")
     fun findProduct(@NotBlank barcode: String): Maybe<Product> {
-        return productRepository.fetchProduct(barcode.toInt())
+        return productRepository.fetchProduct(barcode)
     }
 
     @Error(global = true)

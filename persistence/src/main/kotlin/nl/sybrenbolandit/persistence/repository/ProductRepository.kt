@@ -14,7 +14,7 @@ import javax.inject.Singleton
 @Singleton
 class ProductRepository(private val configuration: DataSourceConfig, private val mongoClient: MongoClient) {
 
-    fun fetchProduct(barcode: Int): Maybe<Product> {
+    fun fetchProduct(barcode: String): Maybe<Product> {
        return Flowable.fromPublisher(
                 getCollection()
                         .find(eq("barcode", barcode))
