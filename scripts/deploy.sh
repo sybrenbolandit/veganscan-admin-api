@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 heroku container:login
 ./gradlew stage
 heroku container:push web
