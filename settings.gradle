@@ -1,2 +1,2 @@
-rootProject.name = "veganscan"
+rootProject.name = "veganscan-admin-api"
 include("webapp", "persistence")

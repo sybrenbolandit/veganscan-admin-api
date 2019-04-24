@@ -1,6 +1,6 @@
 micronaut:
     application:
-        name: veganscan
+        name: veganscan-admin-api
     server:
         port: 8086
 

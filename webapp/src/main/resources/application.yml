@@ -1,6 +1,6 @@
 micronaut:
     application:
-        name: veganscan
+        name: veganscan-admin-api
 
 mongodb:
     uri: mongodb://veganscanuser:dskf887fds7df7sf@ds117846.mlab.com:17846
