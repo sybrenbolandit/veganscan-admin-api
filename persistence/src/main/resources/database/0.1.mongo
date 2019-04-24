@@ -1,0 +1,2 @@
+db.ingredient.createIndex( { "name": 1 }, { unique: true } )
+db.product.createIndex( { "barcode": 1 }, { unique: true } )
