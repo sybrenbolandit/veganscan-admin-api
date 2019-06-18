@@ -3,12 +3,12 @@ micronaut:
         name: veganscan-admin-api
     security:
         enabled: true
-        user: veganscan-admin
-        password: lkjsdflsij
+        user: $API_USER
+        password: $API_PASSWORD
 
 mongodb:
-    uri: mongodb://veganscanuser:dskf887fds7df7sf@ds117846.mlab.com:17846
+    uri: mongodb://$DATABASE_USER:$DATABASE_PASSWORD@ds139167.mlab.com:39167
 
 vegandb:
     database:
-        name: heroku_7fggb39n
+        name: heroku_sfl14q82

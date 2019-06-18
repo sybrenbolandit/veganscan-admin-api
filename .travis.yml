@@ -1,0 +1,30 @@
+sudo: required
+
+services:
+  - docker
+
+jdk:
+  - oraclejdk8
+
+install:
+  - wget -qO- https://toolbelt.heroku.com/install.sh | sh
+  - docker login --username _ --password=$HEROKU_API_KEY registry.heroku.com
+  - heroku plugins:install @heroku-cli/plugin-container-registry
+
+script:
+  - ./gradlew stage
+  - heroku container:push web --app $HEROKU_APP_NAME
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+deploy:
+  provider: script
+  script:
+    heroku container:release web --app $HEROKU_APP_NAME
