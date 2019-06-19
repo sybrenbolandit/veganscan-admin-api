@@ -6,7 +6,6 @@ import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
 import io.micronaut.http.annotation.Status
-import io.micronaut.security.annotation.Secured
 import io.micronaut.validation.Validated
 import io.reactivex.Maybe
 import io.reactivex.Single
@@ -16,7 +15,6 @@ import javax.validation.Valid
 import javax.validation.constraints.NotBlank
 
 @Validated
-@Secured("isAuthenticated()")
 @Controller("/products")
 class ProductController(val productRepository: ProductRepository) {
 
