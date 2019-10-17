@@ -1,2 +1,2 @@
-# Veganscan API
-API for getting product information
+# Veganscan Admin API
+API for managing product and ingredient information
